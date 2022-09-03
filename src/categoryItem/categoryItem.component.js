@@ -1,12 +1,15 @@
 import './categoryItem.styles.scss'
 
-const CategoryItemComponent = ({ category }) => {
+const CategoryItem = ({ category }) => {
   const { imageUrl, title } = category
 
   return (
-    <div className='category-container'>
-      <div className='background-image' style={{ backgroundImage: `url(${imageUrl})` }} />
-      <div className='category-body-container'>
+    <div className="category-container">
+      <div
+        className="background-image"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+      <div className="category-body-container">
         <h2>{title}</h2>
         <p>Shop Now</p>
       </div>
@@ -14,4 +17,4 @@ const CategoryItemComponent = ({ category }) => {
   )
 }
 
-export default CategoryItemComponent
+export default CategoryItem
