@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import FormInput from '../formInput/formInput.component'
-import Button from '../button/button.component'
+import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component'
 
 import {
   signInWithGooglePopup,
@@ -76,7 +76,11 @@ const SignInForm = () => {
 
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
-          <Button type="button" buttonType="google" onClick={singInWithGoogle}>
+          <Button
+            type="button"
+            buttonType={BUTTON_TYPE_CLASSES.google}
+            onClick={singInWithGoogle}
+          >
             Google sign in
           </Button>
         </div>
